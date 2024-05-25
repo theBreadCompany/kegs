@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="tailwind.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css">
-        <script src="//unpkg.com/alpinejs" defer></script>
+        <script src="content.js" defer></script>
     </head>
     <body>
         <div>
@@ -46,20 +46,21 @@
             <nav class="m-5 border-b-4 justify-between items-center hidden">
                 <!-- Mobile version - TODO -->
             </nav>
-            <div class="grid grid-flow-col auto-cols-max gap-4 m-2">
+
+            <template id="application">
                 <div class="p-4 group relative max-w-80">
                     <div class="group-hover:blur-md">
-                        <img src="https://ae01.alicdn.com/kf/S1776bbfd58014da0a176948d749bafc3u/I2c-oled-anzeige-modul-0-91-zoll-i2c-ssd1306-oled-anzeige-modul-wei-blau-i2c-oled.jpg">
-                        <span class="line-clamp-2">I2c oled anzeige modul 0,91 zoll i2c ssd1306 oled anzeige modul weiß/blau i2c oled bildschirm treiber dc 3,3 v ~ 5v für arduino - AliExpress</span>
-                        <div class="font-bold">0,95€</div>
+                        <img src="" alt="product image" id="productImage">
+                        <span class="line-clamp-2" id="productTitle"></span>
+                        <div class="font-bold" id="productPrice"></div>
                         <div>
                             <i class="fa fa-user-circle"></i>
-                            Applicant
+                            <span id="productApplicant"></span>
                         </div>
                     </div>
                     <div class="absolute top-0 h-full left-0 w-full flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 duration-200">
-                        <a href="https://de.aliexpress.com/item/1005006365875553.html"
-                           class="bg-black text-white rounded p-3 m-1">
+                        <a id="productPage">
+                            class="bg-black text-white rounded p-3 m-1">
                             <i class="fa fa-arrow-right"></i>
                             Visit
                         </a>
@@ -67,7 +68,10 @@
                         <button class="text-white bg-red-700 rounded p-3 m-1">Deny</button>
                     </div>
                 </div>
+            </template>
+            <div class="grid grid-flow-col auto-cols-max gap-4 m-2" id="applicationGrid">
             </div>
+
             <footer class="bg-white fixed bottom-0 border-t-2 border-gray-50 w-full">
                 <div class="container flex flex-col items-center justify-between p-6 sm:space-y-0 sm:flex-row text-sm text-gray-600 text-center">
                     <p>
