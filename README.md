@@ -8,3 +8,7 @@ use at your own caution.
 ## Building
 
 First run `npm i`, then `npm run dev`. Current server port is hard coded to 5501.
+
+## Notes
+
+### Database considerations
